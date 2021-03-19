@@ -7,11 +7,6 @@
   pointer-events: none;
 }
 
-.bd{
-    background-color: yellow;
-   }
-
-
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -85,23 +80,13 @@ code {
 .white-color{
   color: white;
 }
-.nav-pills .nav-link.active {
-  color: white;
-  background-color: #007bff;
-}
-.nav-pills .nav-link{
-  background-color: white;
-}
-.nav-pills .bd{
-  background-color: yellow;
+.nav-pills .nav-item{
+  color: black;
+  background-color: #e6e6e6;
 }
 .list-group-item.active{
   color: white;
   background-color: #007bff;
-}
-.navbar-nav .nav-link.active {
-  color: white;
-  background-color: #3396ff;
 }
 .float-center{
   float: left;
@@ -114,4 +99,23 @@ code {
 }
 .text-right{
   text: right;
+}
+.nav-pills .nav-item.active {
+  color: white;
+  background-color: #007bff;
+}
+
+.list-group-item.active a{
+  color: white;
+  background-color: #007bff;
+}
+
+  /*.navbar-nav .nav-link.active {*/
+  /*  color: white;*/
+  /*  background-color: #3396ff;*/
+  /*}*/
+
+
+.set-pill-size{
+  width: 15rem;
 }

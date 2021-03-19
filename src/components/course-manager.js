@@ -109,14 +109,14 @@ export default class CourseManager
             </div>
                 {/*<h1>Course Manager</h1>*/}
                 {/*<Route path="/courses/table" component={CourseTable}/>*/}
-                <Route path="/courses/table" exact={true} >
+                <Route path="/course/table" exact={true} >
                     <CourseTable
                         updateCourse={this.updateCourse}
                         deleteCourse={this.deleteCourse}
                         courses={this.state.courses}/>
                 </Route>
                 {/*<Route path="/courses/grid" component={CourseGrid}/>*/}
-                <Route path="/courses/grid" exact={true} >
+                <Route path="/course/grid" exact={true} >
                     <CourseGrid
                         updateCourse={this.updateCourse}
                         deleteCourse={this.deleteCourse}

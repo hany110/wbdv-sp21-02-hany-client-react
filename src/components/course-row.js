@@ -28,9 +28,10 @@ const CourseRow = (
                     !editing &&
                     <div>
                     <i className="fa fa-file blue-color pr-1"></i>
-                    <Link to="/editor" className="black-color">
-                        {course.title}
-                    </Link>
+                        <Link to={`/courses/table/edit/${course._id}`} className="black-color">
+                    {/*<Link to="/editor" className="black-color">*/}
+                            {course.title}
+                        </Link>
                     </div>
                 }
                 {

@@ -1,6 +1,7 @@
 import React from 'react'
 import CourseRow from "./course-row";
 import {Link} from "react-router-dom";
+import MetaTags from 'react-meta-tags';
 
 export default class CourseTable extends
     React.Component {
@@ -12,6 +13,9 @@ export default class CourseTable extends
     render() {
         return(
             <div>
+                <MetaTags>
+                    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+                </MetaTags>
                 <table className="table">
                     <thead>
                     <tr>
@@ -27,7 +31,7 @@ export default class CourseTable extends
                                 <i className="fas fa-sort-alpha-down  black-color" aria-hidden="true"></i>
                         </th>
                         <th scope="col">
-                            <Link to="/courses/grid">
+                            <Link to="/course/grid">
                                 <i className="fas fa-th black-color"></i>
                             </Link>
                         </th>

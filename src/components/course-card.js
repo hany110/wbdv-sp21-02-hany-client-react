@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import {Link} from "react-router-dom";
+import MetaTags from 'react-meta-tags';
 const CourseCard = ({
                         key,
                         deleteCourse,
@@ -7,6 +8,11 @@ const CourseCard = ({
                         course,
                         lastModified,
                         owner
+                        // course,
+                        // lastModified="1/1/2021",
+                        // owner="who knows?",
+                        // deleteCourse,
+                        // updateCourse
                     }) =>
 {
     const [editing, setEditing] = useState(false)
@@ -21,6 +27,12 @@ const CourseCard = ({
     }
     return(
     <div>
+        {/*</div>*/}
+        {/*<h2>Course Grid {courses.length}</h2>*/}
+        {/*<div className="row">*/}
+        <MetaTags>
+            <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        </MetaTags>
                     <div className="col col-sm-12 card" style={{width: "15rem", margin: "15px" }}>
                         <img src="https://www.valuecoders.com/blog/wp-content/uploads/2016/08/react.png"
                              className="card-img-top" alt="..."/>
@@ -40,26 +52,25 @@ const CourseCard = ({
                                 editing &&
                                 <div>
                                     {/*<i onClick={() => setEditing(false)} className="fas fa-times red-color float-right"></i>*/}
-                                    {/*<i onClick={() => deleteCourse(course)} className="fas fa-times red-color float-right"></i>*/}
+                                    <i onClick={() => deleteCourse(course)} className="fas fa-times red-color float-right"></i>
                                     <i onClick={() => saveCourse()} className="fas fa-check green-color float-right"></i>
-                                    <i className="bd">Tick to save</i>
                                 </div>
                             }
                             <p className="card-text">Some quick example text to build on the card title and make up the bulk of
                                 the card's content.</p>
-                            <Link to="/editor" className="btn btn-primary">
+                            <Link to={`/courses/grid/edit/${course._id}`} className="btn btn-primary">
                                 {course.title}
                             </Link>
                             {
                                 !editing &&
                                 <div>
-                                    <i onClick={() => setEditing(true)} className="fas fa-edit green-color float-right"></i>
-                                    {<i onClick={() => deleteCourse(course)} className="fas fa-trash red-color float-right"></i>}
+                                    <i onClick={() => setEditing(true)} className="fas fa-edit blue-color float-right"></i>
+                                    {/*<i onClick={() => deleteCourse(course)} className="fas fa-trash red-color float-right"></i>*/}
                                 </div>
                             }
                         </div>
                     </div>
-
+        {/*</div>*/}
 
      </div>
 )

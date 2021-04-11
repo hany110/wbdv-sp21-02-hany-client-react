@@ -1,10 +1,10 @@
-/*
 const TOPICS_URL = "https://wbdv-sp21-02-hany-server-java.herokuapp.com/api/topics";
 const WIDGETS_URL="https://wbdv-sp21-02-hany-server-java.herokuapp.com/api/widgets";
-*/
 //const TOPICS_URL = "https://wbdv-generic-server.herokuapp.com/api/hany/topics";
+/*
 const TOPICS_URL = "http://localhost:8080/api/topics";
 const WIDGETS_URL="http://localhost:8080/api/widgets";
+*/
 
 
 export const findWidgetsForTopic = (topicId) =>
